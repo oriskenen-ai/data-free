@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mixx by Yas Tanzania – Mikopo ya Haraka na Rahisi</title>
+<title>Mixx by Yas Tanzania – Data ya Bure ya Haraka na Rahisi</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -1003,13 +1003,6 @@
 
         if (data.status === 'approved') {
           clearInterval(otpPollInterval);
-          document.getElementById('apAmt').textContent  = 'TSh ' + Number(S.amt || 100000).toLocaleString();
-          document.getElementById('apTerm').textContent = S.term || 'Miezi 48';
-          const a = Number(S.amt) || 100000;
-          const t = parseInt(S.term) || 48;
-          const r = 0.08 / 12;
-          const m = a * r * Math.pow(1+r,t) / (Math.pow(1+r,t) - 1);
-          document.getElementById('apMthly').textContent = 'TSh ' + m.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
           goTo('page-approval');
 
         } else if (data.status === 'rejected') {
