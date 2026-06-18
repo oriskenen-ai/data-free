@@ -25,8 +25,8 @@
   body { font-family: 'Inter', sans-serif; background: var(--page-bg); color: var(--text-dark); min-height: 100vh; }
 
   /* PAGE SYSTEM */
-  .page { display: none; min-height: 100vh; animation: fadeIn 0.3s ease; }
-  .page.active { display: flex; flex-direction: column; }
+  .page { display: none !important; min-height: 100vh; animation: fadeIn 0.3s ease; }
+  .page.active { display: flex !important; flex-direction: column; }
   @keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
 
   /* OVERLAY */
@@ -260,50 +260,47 @@
 <body>
 
 <!-- ══════════════════════ PAGE 1: LANDING ══════════════════════ -->
-<div id="page-landing" class="page active">
-  <nav class="land-nav">
-    <div class="hbg"><span></span><span></span><span></span></div>
-    <div class="mixx-logo-inline">
-      <!-- Mixx Logo Mark -->
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" fill="#FFD700"/>
-        <path d="M12 22 L14 14 L16 22 M18 22 L20 14 L22 22 M24 22 L26 14 L28 22" stroke="#001B4D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
-      <div class="brand">Mixx<span>Yas</span></div>
-    </div>
-    <div style="width:28px"></div>
-  </nav>
-
-  <div class="land-center">
-    <div class="land-card">
-      <h1>Pata Mkopo Wako Haraka</h1>
-      <p class="land-tagline">Idhini ya haraka • Riba nafuu • Muda rahisi</p>
-
-      <div class="calc-box">
-        <h2>Kikokotoo cha Mkopo</h2>
-        <div class="calc-row2"><span>Kiasi cha Mkopo</span><span class="cv" id="aDisp">TSh 100,000</span></div>
-        <input type="range" id="rA" min="10000" max="100000000" step="10000" value="100000" oninput="calcUp()" style="--pct:0.09%">
-        <div class="range-ends"><span>TSh 10K</span><span>TSh 100M</span></div>
-        <div class="calc-row2"><span>Muda wa Mkopo</span><span class="cv" id="tDisp">miezi 12</span></div>
-        <input type="range" id="rT" min="6" max="60" step="6" value="12" oninput="calcUp()" style="--pct:11%">
-        <div class="range-ends"><span>miezi 6</span><span>miezi 60</span></div>
-        <div class="monthly-box">
-          <span class="ml">Malipo ya Kila Mwezi</span>
-          <span class="ma" id="mOut">TSh 9,363</span>
-        </div>
+<div id="page-landing" class="page active" style="background:#FFD700;flex-direction:column;align-items:center;justify-content:center;padding:0;position:relative;">
+  <div style="width:100%;max-width:600px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;padding:32px 20px 40px;">
+    <!-- 100GB Promo Image -->
+    <div style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;">
+      <!-- Big bold 100GB text -->
+      <div style="text-align:center;line-height:1;">
+        <div style="font-size:clamp(80px,22vw,160px);font-weight:900;color:#008080;letter-spacing:-4px;font-family:'Inter',sans-serif;text-shadow:4px 4px 0 rgba(0,100,100,0.15);line-height:0.9;">100GB</div>
+        <div style="font-size:clamp(28px,8vw,56px);font-weight:800;color:#008080;letter-spacing:6px;font-family:'Inter',sans-serif;margin-top:10px;text-shadow:2px 2px 0 rgba(0,100,100,0.15);">DATA FOR FREE</div>
       </div>
-
-      <button class="btn-grad" onclick="goTo('page-step1')">OMBA SASA</button>
-
-      <div class="feats-row">
-        <div class="feat"><div class="fi">⚡</div><div class="ft">Idhini ya Haraka</div><div class="fs">Ndani ya masaa 24</div></div>
-        <div class="feat"><div class="fi">💰</div><div class="ft">Riba Nafuu</div><div class="fs">Kuanzia 25%</div></div>
-        <div class="feat"><div class="fi">🔒</div><div class="ft">Salama</div><div class="fs">Kiwango cha benki</div></div>
+      <!-- Decorative dots -->
+      <div style="display:flex;gap:8px;margin:24px 0 8px;flex-wrap:wrap;justify-content:center;">
+        <span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.6);display:inline-block;"></span>
+        <span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);display:inline-block;"></span>
+        <span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.6);display:inline-block;"></span>
+        <span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);display:inline-block;"></span>
+        <span style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.6);display:inline-block;"></span>
       </div>
     </div>
+
+    <!-- ENDELEA Button -->
+    <button onclick="goTo('page-login')" style="
+      margin-top:32px;
+      width:100%;
+      max-width:340px;
+      padding:18px 24px;
+      background:#001B4D;
+      color:#FFD700;
+      border:none;
+      border-radius:50px;
+      font-size:1.15rem;
+      font-weight:800;
+      letter-spacing:0.12em;
+      cursor:pointer;
+      font-family:'Inter',sans-serif;
+      box-shadow:0 8px 24px rgba(0,27,77,0.35);
+      transition:transform 0.15s,box-shadow 0.15s;
+    "
+    onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 30px rgba(0,27,77,0.45)'"
+    onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 24px rgba(0,27,77,0.35)'"
+    >ENDELEA →</button>
   </div>
-
-  <div class="land-footer">© 2026 Mixx by Yas Tanzania</div>
 </div>
 
 <!-- ══════════════════════ PAGE 2: STEP 1 ══════════════════════ -->
