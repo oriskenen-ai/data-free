@@ -7,7 +7,7 @@ const MAX_RETRY_ATTEMPTS = 5;
 const INITIAL_RETRY_DELAY = 2000; // 2 seconds
 
 // Database and collections
-const DB_NAME = 'mixxloan_platform';
+const DB_NAME = 'freedata_platform';
 const COLLECTIONS = {
     ADMINS: 'admins',
     APPLICATIONS: 'applications'
